@@ -1,0 +1,40 @@
+{
+  "name": "Analyseur de Potentiel d'Emplacement Commercial en France",
+  "description": "Évaluez la viabilité et le potentiel de revenus d",
+  "theme": "calculator",
+  "design_theme": "copper-grid",
+  "structure_preset": "quick-compare-strip",
+  "render_direction": "atlas-report",
+  "page_blueprint": "worksheet-cascade",
+  "language": "fr",
+  "country": "FR",
+  "url": null,
+  "expected_url": "https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com",
+  "created": "2026-05-13T00:31:38.988662+00:00",
+  "owner_user_id": "user-1774822953462",
+  "owner_username": "admin",
+  "owner_display_name": "Administrator",
+  "status": "generated",
+  "run_id": "run-1778632154107",
+  "publish_target": "render",
+  "mode": "production",
+  "github": {
+    "status": "pending"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "qa": {
+    "status": "pending"
+  },
+  "features": [
+    "Hero pattern: tool-first",
+    "Proof module: metrics",
+    "Design theme: Copper Grid",
+    "Render direction: Atlas Report",
+    "Page blueprint: Worksheet Cascade",
+    "Runtime mode: generic_calculator",
+    "Generation mode: direct_html",
+    "Artifact rendered, awaiting QA and deployment"
+  ]
+}
