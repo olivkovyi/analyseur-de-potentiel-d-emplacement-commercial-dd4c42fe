@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Potentiel d&#x27;Emplacement Commercial en France | Optimisez Votre Décision d&#x27;Implantation Commerciale</title>
+    <meta name="description" content="Évaluez la viabilité et le potentiel de revenus d">
+    <style>
+        :root {
+            --copper-dark: #6C3D2C;
+            --copper-medium: #A86F58;
+            --copper-light: #D4B0A0;
+            --cream: #F5F1ED;
+            --off-white: #FCFAFA;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --grid-line: rgba(0, 0, 0, 0.05);
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --font-display: 'Open Sans Condensed', sans-serif; /* Placeholder, will fall back to sans-serif */
+            --font-body: 'Roboto', sans-serif; /* Placeholder, will fall back to sans-serif */
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            margin: 0;
+            background-color: var(--off-white);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--copper-dark);
+            color: var(--off-white);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px var(--shadow-medium);
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0.5rem auto 0;
+            padding: 0 1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            flex-grow: 1;
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .main-content {
+            background-color: var(--cream);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--grid-line) 0px,
+                var(--grid-line) 1px,
+                transparent 1px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                -45deg,
+                var(--grid-line) 0px,
+                var(--grid-line) 1px,
+                transparent 1px,
+                transparent 20px
+            );
+            background-size: 20px 20px;
+            opacity: 0.3;
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--copper-dark);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--copper-light);
+            padding-bottom: 0.5rem;
+        }
+
+        .tool-panel {
+            background-color: var(--off-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow-light);
+        }
+
+        .tool-panel h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--copper-medium);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid var(--copper-light);
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: white;
+            box-shadow: inset 0 1px 3px var(--shadow-light);
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            background-color: var(--copper-dark);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 8px var(--shadow-medium);
+            font-family: var(--font-display);
+            letter-spacing: 0.05em;
+        }
+
+        button:hover {
+            background-color: var(--copper-medium);
+            transform: translateY(-2px);
+        }
+
+        #tool-result {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background-color: var(--off-white);
+            border: 1px solid var(--copper-light);
+            border-radius: 8px;
+            min-height: 150px;
+            box-shadow: inset 0 2px 5px var(--shadow-light);
+        }
+
+        #tool-result h3 {
+            font-family: var(--font-display);
+            color: var(--copper-dark);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .result-item {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--copper-light);
+        }
+        .result-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .result-item strong {
+            color: var(--copper-dark);
+        }
+
+        .headline-group {
+            margin-top: 2.5rem;
+            background-color: var(--off-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow-light);
+        }
+        .headline-group h3 {
+            font-family: var(--font-display);
+            color: var(--copper-medium);
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+        }
+        .headline-group ul {
+            list-style: none;
+            padding: 0;
+        }
+        .headline-group li {
+            background-color: var(--cream);
+            border: 1px solid var(--copper-light);
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            box-shadow: 0 2px 5px var(--shadow-light);
+        }
+
+        .seo-section {
+            background-color: var(--copper-dark);
+            color: var(--off-white);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .seo-section h2 {
+            color: var(--copper-light);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .seo-section p {
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        .seo-section a {
+            color: var(--copper-light);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .seo-section a:hover {
+            color: var(--off-white);
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: var(--off-white);
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com">
+    <meta property="og:title" content="Analyseur de Potentiel d&#x27;Emplacement Commercial en France">
+    <meta property="og:description" content="Évaluez la viabilité et le potentiel de revenus d">
+    <meta property="og:url" content="https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Analyseur de Potentiel d'Emplacement Commercial en France", "description": "Évaluez la viabilité et le potentiel de revenus d", "url": "https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe" data-runtime-mode="generic_calculator">
+    <header>
+        <h1>Analyseur de Potentiel d'Emplacement Commercial en France</h1>
+        <p class="subtitle">Évaluez la viabilité et le potentiel de revenus d'un site commercial en analysant la démographie, la concurrence et le flux piétonnier.</p>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Optimisez Votre Décision d'Implantation Commerciale</h2>
+            <p>Dans le secteur compétitif de l'immobilier commercial, chaque décision compte. Notre outil exclusif vous offre une analyse approfondie pour évaluer le potentiel réel de tout emplacement en France.</p>
+            <p>En croisant des données démographiques clés avec l'intensité de la concurrence locale et l'estimation du flux piétonnier, vous obtenez une vision claire et actionable. Que vous soyez un développeur immobilier, un franchisé ou un entrepreneur indépendant, prenez des décisions éclairées basées sur des faits.</p>
+
+            <div id="tool-result">
+                <h3 id="result-headline">Vos Résultats d'Analyse</h3>
+                <p><em>Veuillez remplir le formulaire à droite pour lancer votre première analyse.</em></p>
+            </div>
+
+            <div class="headline-group">
+                <h3>Générateur d'accroches pour vos campagnes</h3>
+                <p>Inspirez-vous avec ces variantes d'accroches, générées pour différents styles:</p>
+                <div id="headline-output">
+                    <!-- Headlines will be injected here -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tool-panel">
+            <h3>Paramètres d'Analyse de l'Emplacement</h3>
+            <form id="tool-form">
+                <div class="form-group">
+                    <label for="ville">Ville ou Code Postal :</label>
+                    <input type="text" id="ville" name="ville" placeholder="Ex: Paris, 75001" required>
+                </div>
+                <div class="form-group">
+                    <label for="typeCommerce">Type de Commerce Visé :</label>
+                    <select id="typeCommerce" name="typeCommerce">
+                        <option value="restauration">Restauration / Café</option>
+                        <option value="retail">Retail / Magasin</option>
+                        <option value="services">Services (banque, coiffeur...)</option>
+                        <option value="loisirs">Loisirs / Culture</option>
+                        <option value="autres">Autres</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="populationRayon">Rayon d'étude Démographique (km) : <span id="populationRayonValue">5</span> km</label>
+                    <input type="range" id="populationRayon" name="populationRayon" min="1" max="20" value="5">
+                </div>
+                <div class="form-group">
+                    <label for="concurrenceIntensite">Intensité Concurrentielle Estimée (1=Faible, 5=Très Forte) : <span id="concurrenceIntensiteValue">3</span></label>
+                    <input type="range" id="concurrenceIntensite" name="concurrenceIntensite" min="1" max="5" value="3">
+                </div>
+                <div class="form-group">
+                    <label for="fluxPietonnier">Flux Piétonnier Potentiel (1=Faible, 5=Très Élevé) : <span id="fluxPietonnierValue">3</span></label>
+                    <input type="range" id="fluxPietonnier" name="fluxPietonnier" min="1" max="5" value="3">
+                </div>
+                <button type="submit" id="tool-submit" data-affiliate-slot="primary-tool-action">Analyser l'Emplacement</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="seo-section">
+        <h2>Débloquez le Potentiel de Vos Investissements Immobiliers en France</h2>
+        <p>Vous recherchez un <a href="#">outil d'analyse de localisation commerciale</a> précis pour le marché français ? Notre plateforme offre une solution complète pour les <a href="#">professionnels de l'immobilier</a>, les <a href="#">franchiseurs</a> et les <a href="#">entrepreneurs</a>. Évaluez la <a href="#">viabilité d'un site commercial</a> en analysant des facteurs critiques comme la <a href="#">démographie locale</a>, le <a href="#">niveau de concurrence</a> et le <a href="#">flux de passants</a>. Obtenez des informations détaillées pour vos projets à <a href="#">Paris</a>, <a href="#">Marseille</a>, <a href="#">Lyon</a>, et partout en France. Prenez des décisions d'investissement éclairées, <a href="#">minimisez les risques</a> et <a href="#">maximisez le potentiel de revenus</a> de votre futur emplacement. Notre analyseur de potentiel d'emplacement est l'outil indispensable pour votre <a href="#">stratégie d'expansion commerciale</a> et votre <a href="#">étude de marché locale</a>.</p>
+        <p>Ne laissez plus le hasard dicter vos choix. Bénéficiez d'une <a href="#">évaluation de marché immobilier commercial</a> objective et de <a href="#">rapports d'analyse de site</a> personnalisés. Commencez dès aujourd'hui à transformer vos données en avantages compétitifs.</p>
+    </section>
+
+    <footer>
+        &copy; 2024 Analyseur de Potentiel Commercial. Tous droits réservés.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('tool-form');
+            const resultDiv = document.getElementById('tool-result');
+            const submitButton = document.getElementById('tool-submit');
+            const populationRayonInput = document.getElementById('populationRayon');
+            const populationRayonValueSpan = document.getElementById('populationRayonValue');
+            const concurrenceIntensiteInput = document.getElementById('concurrenceIntensite');
+            const concurrenceIntensiteValueSpan = document.getElementById('concurrenceIntensiteValue');
+            const fluxPietonnierInput = document.getElementById('fluxPietonnier');
+            const fluxPietonnierValueSpan = document.getElementById('fluxPietonnierValue');
+            const headlineOutputDiv = document.getElementById('headline-output');
+
+            // Update range slider values
+            populationRayonInput.addEventListener('input', () => {
+                populationRayonValueSpan.textContent = populationRayonInput.value;
+            });
+            concurrenceIntensiteInput.addEventListener('input', () => {
+                concurrenceIntensiteValueSpan.textContent = concurrenceIntensiteInput.value;
+            });
+            fluxPietonnierInput.addEventListener('input', () => {
+                fluxPietonnierValueSpan.textContent = fluxPietonnierInput.value;
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const ville = document.getElementById('ville').value;
+                const typeCommerce = document.getElementById('typeCommerce').value;
+                const populationRayon = parseInt(populationRayonInput.value);
+                const concurrenceIntensite = parseInt(concurrenceIntensiteInput.value);
+                const fluxPietonnier = parseInt(fluxPietonnierInput.value);
+
+                // Simulate data fetching and analysis
+                // In a real application, this would involve API calls to demographic data,
+                // competitor analysis databases, and foot traffic estimators.
+                const simulateAnalysis = () => {
+                    let potentielDemographique = 0;
+                    if (typeCommerce === 'restauration' || typeCommerce === 'retail') {
+                        potentielDemographique = populationRayon * 1500; // More dependent on local population
+                    } else if (typeCommerce === 'services') {
+                        potentielDemographique = populationRayon * 1000;
+                    } else {
+                        potentielDemographique = populationRayon * 800;
+                    }
+
+                    const facteurConcurrence = (6 - concurrenceIntensite) / 5; // Higher value for lower competition
+                    const facteurFluxPietonnier = fluxPietonnier / 5; // Higher value for higher flux
+
+                    const potentielRevenusAnnuelEstime = Math.round(potentielDemographique * facteurConcurrence * facteurFluxPietonnier * 1000 * (Math.random() * 0.4 + 0.8)); // Base * competition * flux * random factor
+                    const viabiliteScore = Math.round(((potentielRevenusAnnuelEstime / 100000) * (facteurConcurrence + facteurFluxPietonnier) / 2) * 10 + (Math.random() * 10 - 5));
+
+                    const interpretationViabilite = viabiliteScore > 70 ? "Élevée" : (viabiliteScore > 40 ? "Moyenne" : "Faible");
+                    const interpretationPotentiel = potentielRevenusAnnuelEstime > 500000 ? "Très Élevé" : (potentielRevenusAnnuelEstime > 200000 ? "Modéré" : "À Étudier");
+
+                    return {
+                        ville: ville,
+                        typeCommerce: typeCommerce,
+                        potentielDemographique: `${populationRayon} km`,
+                        concurrence: concurrenceIntensite,
+                        fluxPietonnier: fluxPietonnier,
+                        viabiliteScore: Math.min(Math.max(viabiliteScore, 10), 100), // Cap score between 10 and 100
+                        potentielRevenusAnnuelEstime: potentielRevenusAnnuelEstime,
+                        interpretationViabilite: interpretationViabilite,
+                        interpretationPotentiel: interpretationPotentiel
+                    };
+                };
+
+                const analysisResult = simulateAnalysis();
+
+                resultDiv.innerHTML = `
+                    <h3>Résultats pour "${analysisResult.ville}" (${analysisResult.typeCommerce})</h3>
+                    <div class="result-item"><strong>Score de Viabilité Globale :</strong> ${analysisResult.viabiliteScore}/100 (${analysisResult.interpretationViabilite})</div>
+                    <div class="result-item"><strong>Potentiel de Revenus Annuel Estimé :</strong> ${analysisResult.potentielRevenusAnnuelEstime.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' })} (${analysisResult.interpretationPotentiel})</div>
+                    <div class="result-item"><strong>Rayon Démographique Analysé :</strong> ${analysisResult.potentielDemographique}</div>
+                    <div class="result-item"><strong>Intensité Concurrentielle :</strong> ${analysisResult.concurrence}/5</div>
+                    <div class="result-item"><strong>Flux Piétonnier :</strong> ${analysisResult.fluxPietonnier}/5</div>
+                    <p><em>Ces estimations sont basées sur les paramètres fournis et des modèles statistiques. Une étude de terrain complémentaire est toujours recommandée.</em></p>
+                `;
+
+                generateHeadlines(analysisResult);
+            });
+
+            function generateHeadlines(analysisResult) {
+                const ville = analysisResult.ville;
+                const typeCommerce = analysisResult.typeCommerce;
+                const viabilite = analysisResult.interpretationViabilite;
+                const revenus = analysisResult.potentielRevenusAnnuelEstime.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+
+                const headlines = {
+                    SEO: [
+                        `Analyse de Potentiel Commercial ${typeCommerce} à ${ville} : Démographie & Concurrence`,
+                        `Emplacement Commercial ${ville} : Évaluation du Flux Piétonnier et Viabilité`,
+                        `Optimiser l'Implantation ${typeCommerce} en France : Votre Guide à ${ville}`
+                    ],
+                    Clickbait: [
+                        `Votre Futur Emplacement à ${ville} : Un Jackpot Inattendu ou une Erreur Fatale ?`,
+                        `Révélé : Le Secret du Succès pour votre ${typeCommerce} à ${ville} !`,
+                        `Stop aux Doutes ! Découvrez la Vraie Valeur de votre Site à ${ville}.`
+                    ],
+                    Expert: [
+                        `Décryptage du Potentiel : Étude Micro-Géographique pour un ${typeCommerce} à ${ville}`,
+                        `Analyse Predictive d'Implantation Commerciale à ${ville} : Méthodologie et Résultats`,
+                        `Valorisation Foncière et Analyse de Marché pour Votre Projet ${typeCommerce} à ${ville}`
+                    ],
+                    Soft: [
+                        `Trouver le Bon Endroit pour votre ${typeCommerce} à ${ville} : Une Aide Précieuse`,
+                        `Votre Projet Commercial à ${ville} : Évaluons Ensemble son Potentiel`,
+                        `Un Avenir Prometteur pour votre ${typeCommerce} ? Les Indices à ${ville}`
+                    ],
+                    Commercial: [
+                        `Lancez votre ${typeCommerce} à ${ville} avec Confiance : Analyse de Rentabilité`,
+                        `Profitez de Notre Expertise : Votre Emplacement à ${ville} Analysé pour un Succès Garanti`,
+                        `Sécurisez Votre Investissement : Potentiel de ${revenus} pour votre ${typeCommerce} à ${ville}`
+                    ]
+                };
+
+                let outputHtml = '';
+                for (const style in headlines) {
+                    outputHtml += `<h4>Style : ${style}</h4><ul>`;
+                    headlines[style].forEach(headline => {
+                        outputHtml += `<li>${headline}</li>`;
+                    });
+                    outputHtml += `</ul>`;
+                }
+                headlineOutputDiv.innerHTML = outputHtml;
+            }
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
