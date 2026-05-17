@@ -1,21 +1,24 @@
 {
-  "run_id": "run-1778632154107",
-  "job_index": 2,
+  "run_id": "run-1779032516357",
+  "job_index": 1,
   "params": {
     "owner_user_id": "user-1774822953462",
     "owner_username": "admin",
     "owner_display_name": "Administrator",
-    "count": 5,
+    "count": 1,
     "archetype": "calculator",
-    "market": "France",
+    "market": "Growth republish",
     "language": "fr",
     "country": "FR",
-    "brief": "Un outil d'aide à la décision pour les entrepreneurs et les investisseurs immobiliers commerciaux.",
-    "notes": "Évaluez la viabilité et le potentiel de revenus d'un emplacement commercial potentiel en France, en analysant la démographie, la concurrence et le flux piétonnier.\nS'adresse aux professionnels de l'immobilier et du commerce. Nécessite une visualisation claire des données et des analyses de marché.",
-    "import_notes": "",
-    "growth_job_id": "",
-    "growth_slug": "",
-    "growth_kind": "",
+    "brief": "Évaluez la viabilité et le potentiel de revenus d",
+    "notes": "Growth module republish of an updated local artifact.",
+    "import_notes": "Growth module republish of an updated local artifact.",
+    "growth_job_id": "growth-1779032435734",
+    "growth_slug": "analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
+    "growth_kind": "affiliate",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
     "dashboard_mode": "builder",
     "network_site_format": "forum",
     "network_primary_topic": "",
@@ -32,13 +35,14 @@
     "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
     "network_blueprint_id": "",
     "mode": "production",
-    "run_kind": "generated_batch",
+    "run_kind": "import_deploy",
     "publish_target": "render",
     "requested_publish_target": "render",
+    "allow_url_fallback": false,
     "railway_project_id_override": "",
     "railway_environment_id_override": "",
-    "railway_service_id_override": "",
-    "railway_service_name_override": "",
+    "railway_service_id_override": "srv-d81se0pkh4rs73btmtrg",
+    "railway_service_name_override": "analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
     "github_repo_private": true,
     "stage_models": {
       "ideation": "google/gemini-2.5-flash-lite:nitro",
@@ -47,253 +51,33 @@
       "qa": "anthropic/claude-haiku-4.5",
       "escalation": "anthropic/claude-sonnet-4.6"
     },
-    "archetype_display": "mixed batch",
+    "archetype_display": "file deploy",
     "archetype_mix": [
-      "generator",
-      "calculator",
-      "tool"
+      "imported"
     ],
-    "forced_design_theme": "copper-grid",
-    "forced_structure_preset": "quick-compare-strip",
+    "forced_slug": "analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
     "site_idea_title": "Analyseur de Potentiel d'Emplacement Commercial en France",
-    "site_idea_summary": "Évaluez la viabilité et le potentiel de revenus d'un emplacement commercial potentiel en France, en analysant la démographie, la concurrence et le flux piétonnier."
+    "site_idea_summary": "Évaluez la viabilité et le potentiel de revenus d",
+    "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779032435734/analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
+    "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779032435734/analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
+    "import_analysis_model": "preserved-analysis"
   },
-  "site_spec": {
-    "slug": "analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
-    "theme": {
-      "name": "Copper Grid",
-      "slug": "copper-grid",
-      "eyebrow": "Editorial Utility",
-      "family": "editorial-warm",
-      "moods": [
-        "editorial",
-        "warm",
-        "premium",
-        "storytelling"
-      ],
-      "archetypes": [
-        "tool",
-        "calculator",
-        "generator"
-      ],
-      "niches": [
-        "home",
-        "property",
-        "renovation",
-        "budget",
-        "advice"
-      ],
-      "keywords": [
-        "craft",
-        "trust",
-        "service",
-        "quote"
-      ],
-      "token_index": [
-        "advice",
-        "budget",
-        "calculator",
-        "copper",
-        "craft",
-        "editorial",
-        "generator",
-        "grid",
-        "home",
-        "premium",
-        "property",
-        "quote",
-        "renovation",
-        "service",
-        "storytelling",
-        "tool",
-        "trust",
-        "utility",
-        "warm"
-      ],
-      "font_embed": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap",
-      "display_font": "\"Fraunces\", serif",
-      "body_font": "\"Space Grotesk\", sans-serif",
-      "layout": "showcase",
-      "card_style": "paper",
-      "button_style": "gradient",
-      "decor_style": "ribbons",
-      "hero_template": "0.94fr 1.06fr",
-      "seo_template": "1.18fr 0.82fr",
-      "feature_columns": 2,
-      "faq_columns": 3,
-      "hero_min_height": "78vh",
-      "panel_radius": "30px",
-      "card_radius": "24px",
-      "chip_radius": "999px",
-      "button_radius": "18px",
-      "outline_width": "1px",
-      "backdrop_blur": "18px",
-      "palette": {
-        "bg": "#15110f",
-        "surface": "rgba(36, 25, 20, 0.8)",
-        "surface_border": "rgba(255, 255, 255, 0.08)",
-        "text": "#fff2e2",
-        "muted": "#d1b69d",
-        "accent": "#ff9d57",
-        "accent_alt": "#7dd3fc",
-        "hero_glow": "rgba(255, 157, 87, 0.16)",
-        "button_text": "#25140b",
-        "panel_alt": "rgba(255, 255, 255, 0.05)",
-        "shadow": "0 26px 72px rgba(11, 8, 6, 0.35)",
-        "input_fill": "rgba(255, 255, 255, 0.05)"
-      }
-    },
-    "structure": {
-      "name": "Quick Compare Strip",
-      "slug": "quick-compare-strip",
-      "hero_variant": "tool-first",
-      "proof_variant": "metrics",
-      "section_order": [
-        "proof",
-        "features",
-        "faq",
-        "seo"
-      ],
-      "feature_columns": 3,
-      "faq_columns": 2,
-      "family": "compare-strip",
-      "moods": [
-        "direct",
-        "fast",
-        "comparison"
-      ],
-      "archetypes": [
-        "calculator",
-        "tool"
-      ],
-      "niches": [
-        "insurance",
-        "finance",
-        "quotes",
-        "switching"
-      ],
-      "keywords": [
-        "compare",
-        "choices",
-        "fast",
-        "matrix"
-      ],
-      "token_index": [
-        "calculator",
-        "choices",
-        "compare",
-        "comparison",
-        "direct",
-        "faq",
-        "fast",
-        "features",
-        "finance",
-        "first",
-        "insurance",
-        "matrix",
-        "metrics",
-        "proof",
-        "quick",
-        "quotes",
-        "seo",
-        "strip",
-        "switching",
-        "tool"
-      ]
-    },
-    "render_direction": "atlas-report",
-    "render_direction_name": "Atlas Report",
-    "page_blueprint": "worksheet-cascade",
-    "page_blueprint_name": "Worksheet Cascade",
+  "import_analysis": {
     "title": "Analyseur de Potentiel d'Emplacement Commercial en France",
-    "tagline": "Optimisez Votre Décision d'Implantation Commerciale",
     "description": "Évaluez la viabilité et le potentiel de revenus d",
-    "feature_prefix": "Bloc",
-    "action": "Utiliser l'outil",
-    "cta_primary": "Analyser l'Emplacement",
-    "cta_secondary": "Consulter la FAQ",
-    "inputs": [
-      {
-        "id": "amount",
-        "label": "Montant de base",
-        "type": "number",
-        "placeholder": "7500",
-        "weight": 1.0
-      },
-      {
-        "id": "duration",
-        "label": "Durée estimée",
-        "type": "number",
-        "placeholder": "12",
-        "weight": 0.42
-      },
-      {
-        "id": "plan",
-        "label": "Niveau de service",
-        "type": "select",
-        "options": [
-          {
-            "label": "Essentiel",
-            "value": 1.0
-          },
-          {
-            "label": "Performance",
-            "value": 1.18
-          },
-          {
-            "label": "Premium",
-            "value": 1.34
-          }
-        ],
-        "weight": 1.0
-      }
+    "summary": "Évaluez la viabilité et le potentiel de revenus d",
+    "notes": "Growth module republish of an updated local artifact.",
+    "archetype": "calculator",
+    "language": "fr",
+    "country": "FR",
+    "market": "Growth republish",
+    "characteristics": [
+      "imported static site",
+      "ready file deploy",
+      "calculator"
     ],
-    "hero_metrics": [
-      {
-        "value": "Atlas Report",
-        "label": "Cadence"
-      },
-      {
-        "value": "3",
-        "label": "Entrées"
-      },
-      {
-        "value": "Résultat recommandé",
-        "label": "Sortie"
-      }
-    ],
-    "trust_labels": [
-      "Atlas Report",
-      "Analyser l'Emplacement",
-      "Résultat recommandé",
-      "Utilitaire immédiat",
-      "Structure SEO claire"
-    ],
-    "result_label": "Résultat recommandé",
-    "result_unit": "EUR",
-    "runtime_mode": "generic_calculator",
-    "page_variant": "console",
-    "faq_topic": "Analyseur de Potentiel d'Emplacement Commercial en France",
-    "faq_entries": [
-      {
-        "question": "Pourquoi utiliser cet outil pour Analyseur de Potentiel d'Emplacement Commercial en France ?",
-        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
-      },
-      {
-        "question": "Le résultat est-il immédiat ?",
-        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
-      },
-      {
-        "question": "Cette page est-elle adaptée au SEO ?",
-        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
-      }
-    ],
-    "seo_paragraphs": [
-      "Cette page capte une intention forte autour de Analyseur de Potentiel d'Emplacement Commercial en France et la transforme en action utile pour un public situé sur France.",
-      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
-      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
-    ],
-    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Analyseur de Potentiel d&#x27;Emplacement Commercial en France | Optimisez Votre Décision d&#x27;Implantation Commerciale</title>\n    <meta name=\"description\" content=\"Évaluez la viabilité et le potentiel de revenus d\">\n    <style>\n        :root {\n            --copper-dark: #6C3D2C;\n            --copper-medium: #A86F58;\n            --copper-light: #D4B0A0;\n            --cream: #F5F1ED;\n            --off-white: #FCFAFA;\n            --text-dark: #333333;\n            --text-light: #666666;\n            --grid-line: rgba(0, 0, 0, 0.05);\n            --shadow-light: rgba(0, 0, 0, 0.08);\n            --shadow-medium: rgba(0, 0, 0, 0.15);\n            --font-display: 'Open Sans Condensed', sans-serif; /* Placeholder, will fall back to sans-serif */\n            --font-body: 'Roboto', sans-serif; /* Placeholder, will fall back to sans-serif */\n        }\n\n        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Roboto:wght@400;700&display=swap');\n\n        body {\n            font-family: var(--font-body);\n            color: var(--text-dark);\n            margin: 0;\n            background-color: var(--off-white);\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--copper-dark);\n            color: var(--off-white);\n            padding: 1.5rem 0;\n            text-align: center;\n            box-shadow: 0 4px 8px var(--shadow-medium);\n        }\n\n        h1 {\n            font-family: var(--font-display);\n            font-weight: 700;\n            font-size: 2.8rem;\n            margin: 0;\n            letter-spacing: 0.05em;\n        }\n\n        .subtitle {\n            font-size: 1.1rem;\n            max-width: 900px;\n            margin: 0.5rem auto 0;\n            padding: 0 1rem;\n            opacity: 0.9;\n        }\n\n        .container {\n            max-width: 1200px;\n            margin: 0 auto;\n            padding: 2rem 1.5rem;\n            display: grid;\n            grid-template-columns: 1fr;\n            gap: 2.5rem;\n            flex-grow: 1;\n        }\n\n        @media (min-width: 992px) {\n            .container {\n                grid-template-columns: 2fr 1fr;\n            }\n        }\n\n        .main-content {\n            background-color: var(--cream);\n            padding: 2.5rem;\n            border-radius: 8px;\n            box-shadow: 0 5px 15px var(--shadow-light);\n            position: relative;\n            z-index: 1;\n        }\n\n        .main-content::before {\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background: repeating-linear-gradient(\n                45deg,\n                var(--grid-line) 0px,\n                var(--grid-line) 1px,\n                transparent 1px,\n                transparent 20px\n            ),\n            repeating-linear-gradient(\n                -45deg,\n                var(--grid-line) 0px,\n                var(--grid-line) 1px,\n                transparent 1px,\n                transparent 20px\n            );\n            background-size: 20px 20px;\n            opacity: 0.3;\n            border-radius: 8px;\n            z-index: -1;\n        }\n\n        h2 {\n            font-family: var(--font-display);\n            font-size: 2.2rem;\n            color: var(--copper-dark);\n            margin-top: 0;\n            margin-bottom: 1.5rem;\n            border-bottom: 2px solid var(--copper-light);\n            padding-bottom: 0.5rem;\n        }\n\n        .tool-panel {\n            background-color: var(--off-white);\n            padding: 2.5rem;\n            border-radius: 8px;\n            box-shadow: 0 5px 15px var(--shadow-light);\n        }\n\n        .tool-panel h3 {\n            font-family: var(--font-display);\n            font-size: 1.8rem;\n            color: var(--copper-medium);\n            margin-top: 0;\n            margin-bottom: 1.5rem;\n        }\n\n        .form-group {\n            margin-bottom: 1.2rem;\n        }\n\n        label {\n            display: block;\n            margin-bottom: 0.5rem;\n            font-weight: 700;\n            color: var(--text-light);\n            font-size: 0.95rem;\n        }\n\n        input[type=\"text\"],\n        input[type=\"number\"],\n        select {\n            width: calc(100% - 20px);\n            padding: 10px;\n            border: 1px solid var(--copper-light);\n            border-radius: 4px;\n            font-size: 1rem;\n            background-color: white;\n            box-shadow: inset 0 1px 3px var(--shadow-light);\n        }\n\n        input[type=\"range\"] {\n            width: 100%;\n            margin-top: 0.5rem;\n        }\n\n        button {\n            background-color: var(--copper-dark);\n            color: white;\n            padding: 12px 25px;\n            border: none;\n            border-radius: 5px;\n            font-size: 1.1rem;\n            cursor: pointer;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            width: 100%;\n            margin-top: 1.5rem;\n            box-shadow: 0 4px 8px var(--shadow-medium);\n            font-family: var(--font-display);\n            letter-spacing: 0.05em;\n        }\n\n        button:hover {\n            background-color: var(--copper-medium);\n            transform: translateY(-2px);\n        }\n\n        #tool-result {\n            margin-top: 2.5rem;\n            padding: 1.5rem;\n            background-color: var(--off-white);\n            border: 1px solid var(--copper-light);\n            border-radius: 8px;\n            min-height: 150px;\n            box-shadow: inset 0 2px 5px var(--shadow-light);\n        }\n\n        #tool-result h3 {\n            font-family: var(--font-display);\n            color: var(--copper-dark);\n            margin-top: 0;\n            margin-bottom: 1rem;\n            font-size: 1.6rem;\n        }\n\n        .result-item {\n            margin-bottom: 0.8rem;\n            padding-bottom: 0.8rem;\n            border-bottom: 1px dashed var(--copper-light);\n        }\n        .result-item:last-child {\n            border-bottom: none;\n            margin-bottom: 0;\n            padding-bottom: 0;\n        }\n\n        .result-item strong {\n            color: var(--copper-dark);\n        }\n\n        .headline-group {\n            margin-top: 2.5rem;\n            background-color: var(--off-white);\n            padding: 2.5rem;\n            border-radius: 8px;\n            box-shadow: 0 5px 15px var(--shadow-light);\n        }\n        .headline-group h3 {\n            font-family: var(--font-display);\n            color: var(--copper-medium);\n            margin-top: 0;\n            margin-bottom: 1.2rem;\n            font-size: 1.8rem;\n        }\n        .headline-group ul {\n            list-style: none;\n            padding: 0;\n        }\n        .headline-group li {\n            background-color: var(--cream);\n            border: 1px solid var(--copper-light);\n            border-radius: 4px;\n            padding: 10px 15px;\n            margin-bottom: 8px;\n            font-size: 0.95rem;\n            color: var(--text-dark);\n            box-shadow: 0 2px 5px var(--shadow-light);\n        }\n\n        .seo-section {\n            background-color: var(--copper-dark);\n            color: var(--off-white);\n            padding: 3rem 1.5rem;\n            text-align: center;\n            margin-top: 4rem;\n        }\n        .seo-section h2 {\n            color: var(--copper-light);\n            font-size: 2.5rem;\n            margin-bottom: 1.5rem;\n            border-bottom: none;\n            padding-bottom: 0;\n        }\n        .seo-section p {\n            max-width: 900px;\n            margin: 0 auto 1.5rem;\n            line-height: 1.8;\n            opacity: 0.9;\n        }\n        .seo-section a {\n            color: var(--copper-light);\n            text-decoration: underline;\n            transition: color 0.3s ease;\n        }\n        .seo-section a:hover {\n            color: var(--off-white);\n        }\n\n        footer {\n            background-color: var(--text-dark);\n            color: var(--off-white);\n            text-align: center;\n            padding: 1.5rem 0;\n            font-size: 0.9rem;\n            margin-top: auto;\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com\">\n    <meta property=\"og:title\" content=\"Analyseur de Potentiel d&#x27;Emplacement Commercial en France\">\n    <meta property=\"og:description\" content=\"Évaluez la viabilité et le potentiel de revenus d\">\n    <meta property=\"og:url\" content=\"https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Analyseur de Potentiel d'Emplacement Commercial en France\", \"description\": \"Évaluez la viabilité et le potentiel de revenus d\", \"url\": \"https://analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe\" data-runtime-mode=\"generic_calculator\">\n    <header>\n        <h1>Analyseur de Potentiel d'Emplacement Commercial en France</h1>\n        <p class=\"subtitle\">Évaluez la viabilité et le potentiel de revenus d'un site commercial en analysant la démographie, la concurrence et le flux piétonnier.</p>\n    </header>\n\n    <div class=\"container\">\n        <div class=\"main-content\">\n            <h2>Optimisez Votre Décision d'Implantation Commerciale</h2>\n            <p>Dans le secteur compétitif de l'immobilier commercial, chaque décision compte. Notre outil exclusif vous offre une analyse approfondie pour évaluer le potentiel réel de tout emplacement en France.</p>\n            <p>En croisant des données démographiques clés avec l'intensité de la concurrence locale et l'estimation du flux piétonnier, vous obtenez une vision claire et actionable. Que vous soyez un développeur immobilier, un franchisé ou un entrepreneur indépendant, prenez des décisions éclairées basées sur des faits.</p>\n\n            <div id=\"tool-result\">\n                <h3 id=\"result-headline\">Vos Résultats d'Analyse</h3>\n                <p><em>Veuillez remplir le formulaire à droite pour lancer votre première analyse.</em></p>\n            </div>\n\n            <div class=\"headline-group\">\n                <h3>Générateur d'accroches pour vos campagnes</h3>\n                <p>Inspirez-vous avec ces variantes d'accroches, générées pour différents styles:</p>\n                <div id=\"headline-output\">\n                    <!-- Headlines will be injected here -->\n                </div>\n            </div>\n\n        </div>\n\n        <div class=\"tool-panel\">\n            <h3>Paramètres d'Analyse de l'Emplacement</h3>\n            <form id=\"tool-form\">\n                <div class=\"form-group\">\n                    <label for=\"ville\">Ville ou Code Postal :</label>\n                    <input type=\"text\" id=\"ville\" name=\"ville\" placeholder=\"Ex: Paris, 75001\" required>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"typeCommerce\">Type de Commerce Visé :</label>\n                    <select id=\"typeCommerce\" name=\"typeCommerce\">\n                        <option value=\"restauration\">Restauration / Café</option>\n                        <option value=\"retail\">Retail / Magasin</option>\n                        <option value=\"services\">Services (banque, coiffeur...)</option>\n                        <option value=\"loisirs\">Loisirs / Culture</option>\n                        <option value=\"autres\">Autres</option>\n                    </select>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"populationRayon\">Rayon d'étude Démographique (km) : <span id=\"populationRayonValue\">5</span> km</label>\n                    <input type=\"range\" id=\"populationRayon\" name=\"populationRayon\" min=\"1\" max=\"20\" value=\"5\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"concurrenceIntensite\">Intensité Concurrentielle Estimée (1=Faible, 5=Très Forte) : <span id=\"concurrenceIntensiteValue\">3</span></label>\n                    <input type=\"range\" id=\"concurrenceIntensite\" name=\"concurrenceIntensite\" min=\"1\" max=\"5\" value=\"3\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"fluxPietonnier\">Flux Piétonnier Potentiel (1=Faible, 5=Très Élevé) : <span id=\"fluxPietonnierValue\">3</span></label>\n                    <input type=\"range\" id=\"fluxPietonnier\" name=\"fluxPietonnier\" min=\"1\" max=\"5\" value=\"3\">\n                </div>\n                <button type=\"submit\" id=\"tool-submit\" data-affiliate-slot=\"primary-tool-action\">Analyser l'Emplacement</button>\n            </form>\n        </div>\n    </div>\n\n    <section class=\"seo-section\">\n        <h2>Débloquez le Potentiel de Vos Investissements Immobiliers en France</h2>\n        <p>Vous recherchez un <a href=\"#\">outil d'analyse de localisation commerciale</a> précis pour le marché français ? Notre plateforme offre une solution complète pour les <a href=\"#\">professionnels de l'immobilier</a>, les <a href=\"#\">franchiseurs</a> et les <a href=\"#\">entrepreneurs</a>. Évaluez la <a href=\"#\">viabilité d'un site commercial</a> en analysant des facteurs critiques comme la <a href=\"#\">démographie locale</a>, le <a href=\"#\">niveau de concurrence</a> et le <a href=\"#\">flux de passants</a>. Obtenez des informations détaillées pour vos projets à <a href=\"#\">Paris</a>, <a href=\"#\">Marseille</a>, <a href=\"#\">Lyon</a>, et partout en France. Prenez des décisions d'investissement éclairées, <a href=\"#\">minimisez les risques</a> et <a href=\"#\">maximisez le potentiel de revenus</a> de votre futur emplacement. Notre analyseur de potentiel d'emplacement est l'outil indispensable pour votre <a href=\"#\">stratégie d'expansion commerciale</a> et votre <a href=\"#\">étude de marché locale</a>.</p>\n        <p>Ne laissez plus le hasard dicter vos choix. Bénéficiez d'une <a href=\"#\">évaluation de marché immobilier commercial</a> objective et de <a href=\"#\">rapports d'analyse de site</a> personnalisés. Commencez dès aujourd'hui à transformer vos données en avantages compétitifs.</p>\n    </section>\n\n    <footer>\n        &copy; 2024 Analyseur de Potentiel Commercial. Tous droits réservés.\n    </footer>\n\n    <script>\n        document.addEventListener('DOMContentLoaded', () => {\n            const form = document.getElementById('tool-form');\n            const resultDiv = document.getElementById('tool-result');\n            const submitButton = document.getElementById('tool-submit');\n            const populationRayonInput = document.getElementById('populationRayon');\n            const populationRayonValueSpan = document.getElementById('populationRayonValue');\n            const concurrenceIntensiteInput = document.getElementById('concurrenceIntensite');\n            const concurrenceIntensiteValueSpan = document.getElementById('concurrenceIntensiteValue');\n            const fluxPietonnierInput = document.getElementById('fluxPietonnier');\n            const fluxPietonnierValueSpan = document.getElementById('fluxPietonnierValue');\n            const headlineOutputDiv = document.getElementById('headline-output');\n\n            // Update range slider values\n            populationRayonInput.addEventListener('input', () => {\n                populationRayonValueSpan.textContent = populationRayonInput.value;\n            });\n            concurrenceIntensiteInput.addEventListener('input', () => {\n                concurrenceIntensiteValueSpan.textContent = concurrenceIntensiteInput.value;\n            });\n            fluxPietonnierInput.addEventListener('input', () => {\n                fluxPietonnierValueSpan.textContent = fluxPietonnierInput.value;\n            });\n\n            form.addEventListener('submit', (e) => {\n                e.preventDefault();\n\n                const ville = document.getElementById('ville').value;\n                const typeCommerce = document.getElementById('typeCommerce').value;\n                const populationRayon = parseInt(populationRayonInput.value);\n                const concurrenceIntensite = parseInt(concurrenceIntensiteInput.value);\n                const fluxPietonnier = parseInt(fluxPietonnierInput.value);\n\n                // Simulate data fetching and analysis\n                // In a real application, this would involve API calls to demographic data,\n                // competitor analysis databases, and foot traffic estimators.\n                const simulateAnalysis = () => {\n                    let potentielDemographique = 0;\n                    if (typeCommerce === 'restauration' || typeCommerce === 'retail') {\n                        potentielDemographique = populationRayon * 1500; // More dependent on local population\n                    } else if (typeCommerce === 'services') {\n                        potentielDemographique = populationRayon * 1000;\n                    } else {\n                        potentielDemographique = populationRayon * 800;\n                    }\n\n                    const facteurConcurrence = (6 - concurrenceIntensite) / 5; // Higher value for lower competition\n                    const facteurFluxPietonnier = fluxPietonnier / 5; // Higher value for higher flux\n\n                    const potentielRevenusAnnuelEstime = Math.round(potentielDemographique * facteurConcurrence * facteurFluxPietonnier * 1000 * (Math.random() * 0.4 + 0.8)); // Base * competition * flux * random factor\n                    const viabiliteScore = Math.round(((potentielRevenusAnnuelEstime / 100000) * (facteurConcurrence + facteurFluxPietonnier) / 2) * 10 + (Math.random() * 10 - 5));\n\n                    const interpretationViabilite = viabiliteScore > 70 ? \"Élevée\" : (viabiliteScore > 40 ? \"Moyenne\" : \"Faible\");\n                    const interpretationPotentiel = potentielRevenusAnnuelEstime > 500000 ? \"Très Élevé\" : (potentielRevenusAnnuelEstime > 200000 ? \"Modéré\" : \"À Étudier\");\n\n                    return {\n                        ville: ville,\n                        typeCommerce: typeCommerce,\n                        potentielDemographique: `${populationRayon} km`,\n                        concurrence: concurrenceIntensite,\n                        fluxPietonnier: fluxPietonnier,\n                        viabiliteScore: Math.min(Math.max(viabiliteScore, 10), 100), // Cap score between 10 and 100\n                        potentielRevenusAnnuelEstime: potentielRevenusAnnuelEstime,\n                        interpretationViabilite: interpretationViabilite,\n                        interpretationPotentiel: interpretationPotentiel\n                    };\n                };\n\n                const analysisResult = simulateAnalysis();\n\n                resultDiv.innerHTML = `\n                    <h3>Résultats pour \"${analysisResult.ville}\" (${analysisResult.typeCommerce})</h3>\n                    <div class=\"result-item\"><strong>Score de Viabilité Globale :</strong> ${analysisResult.viabiliteScore}/100 (${analysisResult.interpretationViabilite})</div>\n                    <div class=\"result-item\"><strong>Potentiel de Revenus Annuel Estimé :</strong> ${analysisResult.potentielRevenusAnnuelEstime.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' })} (${analysisResult.interpretationPotentiel})</div>\n                    <div class=\"result-item\"><strong>Rayon Démographique Analysé :</strong> ${analysisResult.potentielDemographique}</div>\n                    <div class=\"result-item\"><strong>Intensité Concurrentielle :</strong> ${analysisResult.concurrence}/5</div>\n                    <div class=\"result-item\"><strong>Flux Piétonnier :</strong> ${analysisResult.fluxPietonnier}/5</div>\n                    <p><em>Ces estimations sont basées sur les paramètres fournis et des modèles statistiques. Une étude de terrain complémentaire est toujours recommandée.</em></p>\n                `;\n\n                generateHeadlines(analysisResult);\n            });\n\n            function generateHeadlines(analysisResult) {\n                const ville = analysisResult.ville;\n                const typeCommerce = analysisResult.typeCommerce;\n                const viabilite = analysisResult.interpretationViabilite;\n                const revenus = analysisResult.potentielRevenusAnnuelEstime.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });\n\n                const headlines = {\n                    SEO: [\n                        `Analyse de Potentiel Commercial ${typeCommerce} à ${ville} : Démographie & Concurrence`,\n                        `Emplacement Commercial ${ville} : Évaluation du Flux Piétonnier et Viabilité`,\n                        `Optimiser l'Implantation ${typeCommerce} en France : Votre Guide à ${ville}`\n                    ],\n                    Clickbait: [\n                        `Votre Futur Emplacement à ${ville} : Un Jackpot Inattendu ou une Erreur Fatale ?`,\n                        `Révélé : Le Secret du Succès pour votre ${typeCommerce} à ${ville} !`,\n                        `Stop aux Doutes ! Découvrez la Vraie Valeur de votre Site à ${ville}.`\n                    ],\n                    Expert: [\n                        `Décryptage du Potentiel : Étude Micro-Géographique pour un ${typeCommerce} à ${ville}`,\n                        `Analyse Predictive d'Implantation Commerciale à ${ville} : Méthodologie et Résultats`,\n                        `Valorisation Foncière et Analyse de Marché pour Votre Projet ${typeCommerce} à ${ville}`\n                    ],\n                    Soft: [\n                        `Trouver le Bon Endroit pour votre ${typeCommerce} à ${ville} : Une Aide Précieuse`,\n                        `Votre Projet Commercial à ${ville} : Évaluons Ensemble son Potentiel`,\n                        `Un Avenir Prometteur pour votre ${typeCommerce} ? Les Indices à ${ville}`\n                    ],\n                    Commercial: [\n                        `Lancez votre ${typeCommerce} à ${ville} avec Confiance : Analyse de Rentabilité`,\n                        `Profitez de Notre Expertise : Votre Emplacement à ${ville} Analysé pour un Succès Garanti`,\n                        `Sécurisez Votre Investissement : Potentiel de ${revenus} pour votre ${typeCommerce} à ${ville}`\n                    ]\n                };\n\n                let outputHtml = '';\n                for (const style in headlines) {\n                    outputHtml += `<h4>Style : ${style}</h4><ul>`;\n                    headlines[style].forEach(headline => {\n                        outputHtml += `<li>${headline}</li>`;\n                    });\n                    outputHtml += `</ul>`;\n                }\n                headlineOutputDiv.innerHTML = outputHtml;\n            }\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
-    "generation_mode": "direct_html"
-  }
+    "suggested_slug": "analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe"
+  },
+  "source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779032435734/analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe",
+  "deploy_root": "/var/lib/utility-site-studio/data/growth-republish/growth-1779032435734/analyseur-de-potentiel-d-emplacement-commercial-dd4c42fe"
 }
